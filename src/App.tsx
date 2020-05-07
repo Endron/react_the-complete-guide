@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {Component, ChangeEvent} from 'react';
 import './App.scss';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 import TextLengthInput from './TextLengthInput/TextLengthInput';
 
+interface AppState {
+  readonly username: string
+}
 
-class App extends React.Component {
+class App extends Component<{}, AppState> {
 
-  state = {
+  state: AppState = {
     username: 'admin'
   }
 
-  changeUserNameHandler = (event) => {
+  changeUserNameHandler = (event: ChangeEvent<HTMLInputElement>) => {
     this.setState({
       username: event.target.value
     })
