@@ -1,15 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class UserOutput extends Component {
-
-    render = () => {
-        return (
-            <div>
-                <p>first</p>
-                <p>second</p>
-            </div>
-        );
-    }
+function UserOutput(probs)  {
+    return (
+        <div>
+            <p>User: {probs.username}</p>
+            <p>second</p>
+        </div>
+    );
 }
 
 export default UserOutput;

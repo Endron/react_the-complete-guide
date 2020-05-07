@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <UserInput />
-      <UserOutput />
-      <UserOutput />
-      <UserOutput />
+      <UserOutput username="pmueller"/>
+      <UserOutput username="tzollner"/>
+      <UserOutput username="zmeier"/>
     </div>
   );
 }
