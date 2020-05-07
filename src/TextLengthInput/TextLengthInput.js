@@ -9,18 +9,22 @@ class TextLengthInput extends React.Component {
     }
 
     inputChangedHandler = (event) => {
+        this.updateTextHandler(event.target.value)
+    }
+
+    updateTextHandler = (newText) => {
         this.setState({
-            text: event.target.value
+            text: newText
         });
     }
 
     render = () => {
         return (
             <div className="TextLengthInput">
-                <input type="text" onChange={this.inputChangedHandler}/>
+                <input type="text" onChange={this.inputChangedHandler} value={this.state.text}/>
                 <p>input length: {this.state.text.length}</p>
                 <TextLengthInputValidation text={this.state.text} min="5"/>
-                <CharsComponent text={this.state.text}/>
+                <CharsComponent text={this.state.text} updateTextHandler={this.updateTextHandler}/>
             </div>
         );
     }

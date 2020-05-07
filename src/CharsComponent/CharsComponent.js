@@ -1,18 +1,33 @@
 import React from 'react';
 import CharComponent from './CharComponent'
 
+const removeCharacter = (string, index) => {
+    const chars = string.split('');
+    chars.splice(index, 1);
+
+    return chars.join('');
+}
+
 const CharsComponent = (probs) => {
     const chars = probs.text.split('');
 
-    const individualChar = (char) => {
-        return (
-            <CharComponent char={char}/>
-        );
-    }
-
     return (
-        <div className="CharsComponent">
-            {chars.map(individualChar)}
+        <div className="CharsComponent" onClick={probs.clickHandler}>
+            {
+                chars.map(
+                    (char, index) => {
+
+                        const handler = () => {
+                            const newText = removeCharacter(probs.text, index);
+                            probs.updateTextHandler(newText);
+                        }
+
+                        return (
+                            <CharComponent key={index} char={char} clickHandler={handler}/>
+                        );
+                    }
+                )
+            }
         </div>
     );
 }
