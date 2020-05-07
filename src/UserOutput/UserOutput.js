@@ -1,8 +1,9 @@
 import React from 'react';
+import './UserOutput.scss'
 
 function UserOutput(probs)  {
     return (
-        <div>
+        <div className="UserOutput">
             <p>User: {probs.username}</p>
             <p>second</p>
         </div>

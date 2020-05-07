@@ -1,9 +1,14 @@
 import React from 'react';
+import './UserInput.scss';
 
-function UserInput() {
+function UserInput(probs) {
+    const style = {
+        'width': '80%'
+    }
+
     return(
-        <div className="UserInput">
-            <input />
+        <div className="UserInput" style={style}>
+            <input type="text" onChange={probs.handler} value={probs.initialValue}/>
         </div>
     );
 }
