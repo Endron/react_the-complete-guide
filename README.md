@@ -1,3 +1,5 @@
+![GitHub Pages - Deploy](https://github.com/Endron/react_the-complete-guide/workflows/GitHub%20Pages%20-%20Deploy/badge.svg?branch=master)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
