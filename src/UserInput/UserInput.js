@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserInput.scss';
 
-function UserInput(probs) {
+const UserInput = (probs) => {
     const style = {
         'width': '80%'
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserOutput.scss'
 
-function UserOutput(probs)  {
+const UserOutput = (probs) => {
     return (
         <div className="UserOutput">
             <p>User: {probs.username}</p>
