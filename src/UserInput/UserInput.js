@@ -5,8 +5,7 @@ class UserInput extends Component {
     render = () => {
         return(
             <div className="UserInput">
-                <p>first para</p>
-                <p>second para</p>
+                <input />
             </div>
         );
     }
