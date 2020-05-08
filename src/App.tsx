@@ -1,5 +1,5 @@
 import React, {Component, ChangeEvent} from 'react';
-import './App.scss';
+import cssStyles from'./App.module.scss';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 import TextLengthInput from './TextLengthInput/TextLengthInput';
@@ -22,7 +22,7 @@ class App extends Component<{}, AppState> {
 
   render() {
     return (
-      <div className="App">
+      <div className={cssStyles.App}>
         <TextLengthInput/>
         <p/>
         <p/>

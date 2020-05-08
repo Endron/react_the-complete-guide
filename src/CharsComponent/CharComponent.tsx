@@ -1,5 +1,5 @@
 import React, {EventHandler, MouseEvent, Component} from 'react';
-import './CharComponent.scss';
+import cssStyles from './CharComponent.module.scss';
 
 interface CharComponentProperties {
     readonly char: string,
@@ -10,7 +10,7 @@ class CharComponent extends Component<CharComponentProperties> {
 
     render() {
         return (
-            <div className="CharComponent" onClick={this.props.clickHandler}>
+            <div className={cssStyles.CharComponent} onClick={this.props.clickHandler}>
                 {this.props.char}
             </div>
         );

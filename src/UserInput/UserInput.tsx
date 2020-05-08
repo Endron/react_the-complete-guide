@@ -1,5 +1,5 @@
 import React, {Component, EventHandler, ChangeEvent} from 'react';
-import './UserInput.scss';
+import cssStyles from './UserInput.module.scss';
 
 interface UserInputProperties {
     readonly initialValue: string,
@@ -14,7 +14,7 @@ class UserInput extends Component<UserInputProperties> {
         }
     
         return(
-            <div className="UserInput" style={style}>
+            <div className={cssStyles.UserInput} style={style}>
                 <input 
                     type="text" 
                     onChange={this.props.handler} 

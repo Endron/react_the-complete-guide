@@ -2,11 +2,11 @@
     border: "medium";
     width: "10%";
 
-    .TextLengthInputValidation.valid {
+    .valid {
         color: green;
     }
 
-    .TextLengthInputValidation.invalid {
+    .invalid {
         color: red;
     }
 }
